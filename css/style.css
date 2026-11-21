@@ -1,3 +1,248 @@
+/* ==========================================================================
+   1. Variables & Reset
+   ========================================================================== */
+:root {
+  --pink: #ffb5c0;
+  --gray: #d9d9d9;
+  --text: #000000;
+  --muted: #666666;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Inter, Arial, sans-serif;
+  font-weight: 300;
+  color: var(--text);
+}
+
+main {
+  flex: 1;
+  width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   2. Utilities & Reusable Components
+   ========================================================================== */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.wrap {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.wrap h2 {
+  margin-bottom: 24px;
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.wrap h2.sub {
+  margin: 48px 0 24px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.btn-pink {
+  display: inline-block;
+  padding: 12px 22px;
+  font-size: 18px;
+  background: var(--pink);
+}
+
+.btn-pink:hover {
+  filter: brightness(0.95);
+}
+
+.ph {
+  position: relative;
+  aspect-ratio: 1 / 0.84;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f3f3f5, #dcdce2);
+}
+
+.ph img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   3. Header & Navigation
+   ========================================================================== */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  padding: 20px 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  font-size: 28px;
+  letter-spacing: 4px;
+  background: var(--pink);
+}
+
+.search {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+  max-width: 560px;
+}
+
+.search input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px 16px;
+  font: inherit;
+  font-size: 18px;
+  background: var(--gray);
+  border: 0;
+}
+
+.catalog-btn {
+  margin-left: auto;
+}
+
+.icons {
+  display: flex;
+  gap: 16px;
+  margin: 0 20px 0 40px;
+}
+
+.icons a {
+  position: relative;
+}
+
+.icons svg {
+  display: block;
+  width: 30px;
+  height: 30px;
+}
+
+.badge {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 18px;
+  font-size: 12px;
+  background: var(--pink);
+  border-radius: 50%;
+}
+
+.badge.on {
+  display: flex;
+}
+
+/* ==========================================================================
+   4. Hero & Page Banners
+   ========================================================================== */
+.hero {
+  position: relative;
+  height: 70vh;
+  min-height: 360px;
+  padding: 40px;
+  color: #ffffff;
+  background: #6b6358 url("../images/hero.jpg") center / cover;
+}
+
+.hero .btn-pink {
+  margin-bottom: 40px;
+  padding: 20px;
+  font-size: 32px;
+  color: #000000;
+}
+
+.hero p {
+  font-size: 32px;
+}
+
+.title-bar {
+  padding: 52px 20px;
+  font-size: 36px;
+  letter-spacing: 1px;
+  text-align: center;
+  text-transform: uppercase;
+  background: var(--pink);
+}
+
+.title-bar h1 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/* ==========================================================================
+   5. Catalog Grid & Product Cards
+   ========================================================================== */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.cat {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  aspect-ratio: 1;
+  padding: 8px 12px;
+  font-size: 22px;
+  font-weight: 400;
+  background: #eeeeee center / cover;
+}
+
+.card {
+  position: relative;
+}
+
+.card-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
 
 .fav {
